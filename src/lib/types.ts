@@ -1,4 +1,5 @@
 export interface Results {
+    basicSalary: number;
     totalEarnings: number;
     grossDeduction: number;
     grossEarnings: number;

@@ -15,7 +15,6 @@ interface OutputTableProps {
 }
 
 const OutputTable = ({ results }: OutputTableProps) => {
-  const formatCurrency = (value: number) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 
   if (!results) {
     return <div className="text-center py-4">No data available. Please fill in the form to see the results.</div>;
@@ -33,23 +32,23 @@ const OutputTable = ({ results }: OutputTableProps) => {
         <TableBody>
           <TableRow className="min-h-6">
             <TableCell className="font-normal">Basic Salary</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.totalEarnings)}</TableCell>
+            <TableCell className="text-right">{results.basicSalary}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-normal">Gross Earnings</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.grossEarnings)}</TableCell>
+            <TableCell className="text-right">{results.grossEarnings}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-normal">Gross Deduction</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.grossDeduction)}</TableCell>
+            <TableCell className="text-right">{results.grossDeduction}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-normal">Employee EPF (8%)</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.employeeEPF)}</TableCell>
+            <TableCell className="text-right">{results.employeeEPF}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-normal">APIT</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.APIT)}</TableCell>
+            <TableCell className="text-right">{results.APIT}</TableCell>
           </TableRow>
         </TableBody>
       </Table>
@@ -58,7 +57,7 @@ const OutputTable = ({ results }: OutputTableProps) => {
           Net Salary (Take Home)
         </CardContent>
         <CardContent className="text-base font-semibold">
-          {formatCurrency(results.netSalary)}
+          {results.netSalary}
         </CardContent>
       </Card>
       <p className="text-sm font-semibold text-text-secondary mt-4">Contribution from the employer</p>
@@ -66,17 +65,17 @@ const OutputTable = ({ results }: OutputTableProps) => {
         <TableBody>
           <TableRow>
             <TableCell className="font-normal">Employer EPF (12%)</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.employerEPF)}</TableCell>
+            <TableCell className="text-right">{results.employerEPF}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-normal">Employer ETF (3%)</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.employerETF)}</TableCell>
+            <TableCell className="text-right">{results.employerETF}</TableCell>
           </TableRow>
         </TableBody>
         <TableFooter>
           <TableRow>
             <TableCell>CTC (Cost to Company)</TableCell>
-            <TableCell className="text-right">{formatCurrency(results.CTC)}</TableCell>
+            <TableCell className="text-right">{results.CTC}</TableCell>
           </TableRow>
         </TableFooter>
       </Table>
