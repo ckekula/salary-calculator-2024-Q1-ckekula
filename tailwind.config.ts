@@ -20,7 +20,8 @@ const config = {
     extend: {
       colors: {
         'card-border': 'rgba(224, 224, 224, 1)',
-        'add-button': 'rgba(0, 82, 234, 1)'
+        'brand-color': 'rgba(0, 82, 234, 1)',
+        'text-secondary': 'rgba(117, 117, 117, 1)'
       },
       keyframes: {
         "accordion-down": {
