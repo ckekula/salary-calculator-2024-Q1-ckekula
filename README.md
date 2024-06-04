@@ -20,8 +20,13 @@ yarn dev
 ## Technologies used
 
 Next.js
+
 TypeScript
+
 TailwindCSS
+
 React-Hook-Form
+
 zod
+
 Shadcn/ui
